@@ -1,0 +1,3 @@
+${label};${params};${expectedStatusCode}
+Invalid number params;${invalidNumbers};204
+Invalid letter params;${invalidLetters};400

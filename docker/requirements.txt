@@ -1,0 +1,5 @@
+jsonschema
+robotframework-requests
+robotframework-seleniumlibrary
+robotframework-datadriver
+robotframework-databaselibrary

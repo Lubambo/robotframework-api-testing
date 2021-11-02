@@ -8,13 +8,13 @@ The main reason for choosing the robot framework is that I was studying it 🙃.
 The idea behind this project structure is to make possible the feature codification apart from the project running structure, that is, the tester can code the feature specifications and its related data and values comparisons without worry about how it will be linked.
 
 **Project files tree:**
-* [data](./data/README.md)
-* [docker](./docker/README.md)
-* [features](./features/README.md)
-* output
-* [resources](./resources/README.md)
-* [specs](./specs/README.md)
-* [testsManagement](./testsManagement/README.md)
+* 💾 [data](./data/README.md)
+* 🐳 [docker](./docker/README.md)
+* 🧪 [features](./features/README.md)
+* 📈 output
+* 💼 [resources](./resources/README.md)
+* 📋 [specs](./specs/README.md)
+* 🕹️ [testsManagement](./testsManagement/README.md)
 
 
 A keywords interface is proposed so the feature specification has a clear procedure, making easy to write the specification and maintaing it, and this interface is presented as four main keywords: `HTTP Request`, `Validate Response`, `Validate Payload` and `Validate Endpoint`. See [features README](./features/README.md).

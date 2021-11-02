@@ -5,12 +5,12 @@ docker build -t <image_name> ./directory/of/yours/dockerfile
 ```
 Command to build this project: `docker build -t run_robot ./docker/docker_images`
 
-## 01.1. Query Docker images
+#### 01.1. Query Docker images
 ```bash
 docker images
 ```
 
-## 01.2. Remove a Docker image
+#### 01.2. Remove a Docker image
 ```bash
 docker rmi <image_name>
 ```
@@ -26,7 +26,7 @@ docker run -itd --name <container_name> -v <local_directory_name>:<container_dir
 
 Command to start this project container: `docker run -itd --name robot_container -v ${pwd}/features:/opt/robotframework/tests -v ${pwd}/output:/opt/robotframework/reports run_robot`
 
-## 02.1. Inspect container
+#### 02.1. Inspect container
 ```bash
 docker inspect <container_name>
 ```
@@ -39,12 +39,12 @@ docker exec <options> <container_name> <command>
 `options`: tags can be used to refine commands inside the docker. *[Options list](https://docs.docker.com/engine/reference/commandline/exec/#options)*.
 Command to run all tests suites: `docker exec -it robot_container python3 -m robot -d /opt/robotframework/reports /opt/robotframework/tests`
 
-## 03.1. Stop container
+#### 03.1. Stop container
 ```bash
 docker container stop <nome_do_container>
 ```
 
-## 03.2. Remove container
+#### 03.2. Remove container
 ```bash
 docker container rm <nome_do_container>
 ```

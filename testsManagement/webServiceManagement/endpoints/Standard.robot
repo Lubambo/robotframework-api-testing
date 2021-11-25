@@ -10,3 +10,4 @@ ${v1_3}  v1.3
 
 ### Resources
 ${SOME_FEATURE}  someFeature
+${PEOPLE}        people

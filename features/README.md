@@ -15,14 +15,7 @@ The table bellow shows the standard values used in every request:
 
 | Variable | Value | Description |
 | -------- | ----- | ----------- |
-| `${base_url}` | `https://url.com/service` | base URL |
-| `${v1}` | `v1` | Api version `1` |
-| `${v1_1}` | `v1.1` | Api version `1.1` |
-| `${v1_2}` | `v1.2` | Api version `1.2` |
+| `${base_url}` | `https://swapi.dev/api/` | base URL |
 
-
-## [Some Feature](./someFeature/README.md)
-| Execution | command |
-| --------- | ---- |
-| local | `robot -i some-feature-get -d ./output ./features` |
-| Docker | `TODO` |
+Features list:
+* [People](./people/README.md)

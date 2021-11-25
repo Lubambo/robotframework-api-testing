@@ -10,15 +10,20 @@ Resource       ${EXECDIR}/resources/common/ConsoleUtils.robot
 # Database Query informations:
 # In order to get data from database, there are some mandatory values that you must inform.
 # They are: ${sqlTable}, @{sqlColumns}, &{sqlSetup}.
+#
 # Inside &{sqlSetup}, the standard set of key-value pair must be preserved, although "dbName"
 # is not mandatory if your project has a standard database connection setted in
-# testsManagement/dataManagement/DataManager.robot
+# testsManagement/dataManagement/DataManager.robot.
+#
+# The data file path is predefined in the project.properties file, when the data is queried from the database.
+# If you need to use a local 
 ${sqlTable}    Table_Name
 @{sqlColumns}  Col_One  Col_Two  Col_Three
 @{filters}     WHERE Col_N = 'ON'
 &{sqlSetup}    template=${sqlScript}  table=${sqlTable}  columns=${sqlColumns}
-...            amount=${sqlAmount}  filters=${filters}  #dbName=${project['database']['dbOneName']}
-#...            dbName=${None}  file=${filePath}
+...            amount=${sqlAmount}  filters=${filters}  
+#...            dbName=${project['database']['dbOneName']}
+#...            dbName=${None}
 
 
 *** Keywords ***

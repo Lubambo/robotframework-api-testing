@@ -10,7 +10,7 @@ Resource       ${commonRes}/ConsoleUtils.robot
 
 Variables   ${EXECDIR}/resources/locators.py
 
-Library  DataDriver  ${testDataFile}  config_keyword=Update DataDriver
+Library  DataDriver  config_keyword=Update DataDriver
 Library  String
 Library  Collections
 
@@ -21,11 +21,8 @@ ${commonRes}  ${EXECDIR}/resources/common
 # Test Management path.
 ${testsManager}  ${EXECDIR}/testsManagement
 
-# The path that test data file will be placed.
-${testDataFile}  ${project['testData']['filePath']}
-
 # SQL script to query random data from data base.
-${sqlScript}  ${EXECDIR}/resources/SqlScripts/selectRandom.sql
+${sqlScript}  ${EXECDIR}/resources/SqlScripts/selectRandomOracle.sql
 
 # Amount of data that will be collected from database.
 ${sqlAmount}  ${project['testData']['dataSize']}

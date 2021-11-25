@@ -81,7 +81,7 @@ Conferir Response
     [Arguments]  ${response}  ${expectedSchema}  ${expectedStatusCode}=200
 
     Conferir Status Code  ${response}  ${expectedStatusCode}
-    Conferir Header  ${response}  Content-Type  application/json;charset=UTF-8
+    Conferir Header  ${response}  Content-Type  application/json
     ${schema}  Read JSON file  ${expectedSchema}
     Validate JSON  ${response.json()}  ${schema}
 

@@ -1,17 +1,13 @@
 # common
-Contém arquivos com `keywords` úteis consumidas em outros arquivos. Cada arquivo reúne `keywords` que trabalham em cima da mesma temática e estes arquivos estão dentro de diretórios que representam essa temática.
+## Files and Directories
+* `database`: deals with the interaction with the database;
 
-# Diretórios e Arquivos
-* `database`: trata da interação com o banco de dados;
+* `json`: gathers together `keywords` that consume `JSON`;
 
-* `endpoints`: organiza e gerencia os endpoints utilizados nos requests;
+* `webService`: http interaction interfaces and `response` validations;
 
-* `webService`: interface de interação com serviço http e validações de `response`;
+* `ConsoleUtils.robot`: uses colorful *tags* to make the interaction with the console easier;
 
-* `json`: reúne as operações que consomem `JSON`;
+* `DateUtils.robot`: resolves time operations;
 
-* `ConsoleUtils.robot`: interage com o console. Mais utilizado para passar mensagens com *tags* no console;
-
-* `DateUtils.robot`: reúne operações que envolvem medidas de tempo;
-
-* `Uitls.robot`: possui `keywords` úteis que facilitam o trabalho.
+* `Uitls.robot`: contains utilities `keywords`.

@@ -17,8 +17,8 @@ segue uma interface padrão de `keywords` para facilitar e agilizar o etendiment
 * `Validate Endpoint`: condenses all `keywords` on `specs` that will be responsable for testing the respective feature. It acts as a template to be called in the respective feature file;
 
 ## Directories list
-Listing `specs` directories:
+* `common`: contains general configurations used in more than one `specs` files;
 
-* `common`: contains specs configurations used in more than one specs files;
+* `people`: contains the `spec` definitions of `people` feature;
 
-* `some_spec`: this specs definition.
+* `someFeature_spec`: contains the `spec` definitions of `someFeature` feature.

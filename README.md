@@ -6,7 +6,11 @@ The main reason for choosing the robot framework is that I was studying it 🙃.
 
 ## 🧰 The Project
 The idea behind this project structure is to make possible the feature codification apart from the project running structure, that is, the tester can code the feature specifications and its related data and values comparisons without worry about how it will be linked.
+
 The Robot Framework library [`DataDriver`](https://github.com/Snooz82/robotframework-datadriver) has big impact in this structure because the test data processing was centered on how `DataDriver` handles data. The reason for choosing this library is that it allows to write the test's feature and specification in a more clean way and therefore generating a log output easier to read.
+
+### [📖 Usage Guide](./UsageGuide.md)
+The [Usage Guide](./UsageGuide.md) is a project set up proposal and to understand how the [testsManagement](./testsManagement/README.md) works.
 
 **Project files tree:**
 * 💾 [data](./data/README.md)
@@ -25,7 +29,7 @@ A keywords interface is proposed so the feature specification has a clear proced
 - [ ] Add configuration to enable the possibility of one request for the entire test case;
 - [ ] Translate to english;
 - [ ] Write a README file for each main directory;
-- [ ] Elaborate and test docker partition
+- [ ] Elaborate and test docker partition;
 - [ ] Some feedback, please?🙃;
 - [ ] Refactor, refactor, refactor...;
 

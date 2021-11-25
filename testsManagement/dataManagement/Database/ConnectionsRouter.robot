@@ -8,24 +8,32 @@ Resource  ${EXECDIR}/resources/common/database/ConnectionsRouter.robot
 Library  Collections
 
 *** Keywords ***
-Create Oracle Base Connection
-    ${oracleConn}  Create Base Connection  apiModule=${project['database']['dbApi']}
+Create Database Connection Params
+    ${dbConn}  Create Base Connection  apiModule=${project['database']['dbApi']}
     ...            service=${project['database']['dbService']}
     ...            host=${project['database']['dbHost']}
     ...            port=${project['database']['dbPort']}
-    [Return]  ${oracleConn}
+    [Return]  ${dbConn}
 
-Set DB Connection Params
+Set Database Connection
     [Arguments]  ${dbName}
 
-    ${oracleConn}  Create Oracle Base Connection
+    # Create the base connection params.
+    ${dbConn}  Create Database Connection Params
 
-    ${dbOne}       DbOneConnection.Create Connection  ${oracleConn}
-    &{dbsInfos}    Create Dictionary  dbOne=&{dbOne}
+    # Create DatabaseOne connection params.
+    ${dbOne}      DbOneConnection.Create Connection  ${dbConn}
+
+    # Create a dictionary that will keep the database connection.
+    &{dbOptions}  Create Dictionary  dbOne=&{dbOne}
     
-    &{dbTwo}       DbTwoConnection.Create Connection  ${oracleConn}
-    Set To Dictionary  ${dbsInfos}  dbTwo=&{dbTwo}
+    # If there is more than database connection, create them and
+    # add to the connections dictionary keeper.
+    &{dbTwo}      DbTwoConnection.Create Connection  ${dbConn}
+    Set To Dictionary  ${dbOptions}  dbTwo=&{dbTwo}
 
-    ${params}      Get DB Connection Params  ${dbName}  &{dbsInfos}
+    # Manage what database connection will be used according to the
+    # database name informed. 
+    ${params}     Get DB Connection Params  ${dbName}  &{dbOptions}
 
     [Return]  ${params}

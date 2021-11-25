@@ -57,7 +57,7 @@ Make database connection if exists
     # If the dbName is passed as None, the script will use the file path stated in sqlSetup.file.
     # It is mandatory to state the file path if dbName value is None.
     IF  '${setup.dbName}' != '${None}'
-        ${connParams}  Set DB Connection Params  ${setup.dbName}
+        ${connParams}  Set Database Connection  ${setup.dbName}
 
         Set To Dictionary  ${setup}  connParams=${connParams}
         

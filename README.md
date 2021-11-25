@@ -25,7 +25,6 @@ The [Usage Guide](./UsageGuide.md) is a project set up proposal and to understan
 A keywords interface is proposed so the feature specification has a clear procedure, making easy to write the specification and maintaing it, and this interface is presented as four main keywords: `HTTP Request`, `Validate Response`, `Validate Payload` and `Validate Endpoint`. See [features README](./features/README.md).
 
 ## 🚧 TODO
-- [ ] Create a Usage Guide;
 - [ ] Add configuration to enable the possibility of one request for the entire test case;
 - [ ] Translate to english;
 - [ ] Write a README file for each main directory;
